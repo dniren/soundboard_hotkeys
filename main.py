@@ -19,7 +19,7 @@ def counter_increase(increase: bool):
 
 
 def soundboard_play(filename: str):
-    playsound.playsound(filename)
+    playsound.playsound(filename, block=False)
 
 
 def on_press(key):
