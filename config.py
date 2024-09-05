@@ -3,8 +3,8 @@ import main
 
 # pair character keys with sound files here, in the format 'h': 'filename.mp3'
 soundboard = {
-    '1': 'America the Beautiful.mp3',
-    '2': 'Crossing the Bar.mp3',
+    '1': 'America_the_Beautiful.mp3',
+    '2': 'God_is_Seen.mp3',
     '3': 'Every Little Thing She Does is Magic.mp3',
     '4': 'Hallelujah.mp3'
             }
@@ -14,6 +14,7 @@ counter_message = 'Your counter message goes here'
 counter_start_number = 0
 counter_increase_key = '5'
 counter_decrease_key = '6'
+counter_reset_key = '7'
 
 # click the green arrow to run
 if __name__ == '__main__':

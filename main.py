@@ -18,6 +18,15 @@ def counter_increase(increase: bool):
     start_counter(text, count)
 
 
+def counter_reset():
+    with open('counter.txt') as f:
+        info: list[str] = f.read().split(' ')
+    text: str = ' '.join(info[:-1])
+    count: int = 0
+    print(count)
+    start_counter(text, count)
+
+
 def soundboard_play(filename: str):
     playsound.playsound(filename, block=False)
 
@@ -29,7 +38,9 @@ def on_press(key):
     if key_char in config.soundboard.keys():
         try: soundboard_play(f'soundfiles/{config.soundboard[key_char]}')
         except playsound.PlaysoundException: print(f'{config.soundboard[key_char]} not found in soundfiles folder')
-    elif key_char == config.counter_increase_key:
+    if key_char == config.counter_increase_key:
         counter_increase(True)
-    elif key_char == config.counter_decrease_key:
+    if key_char == config.counter_decrease_key:
         counter_increase(False)
+    if key_char == config.counter_reset_key:
+        counter_reset()
